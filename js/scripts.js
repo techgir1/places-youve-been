@@ -1,9 +1,10 @@
-function Places(city, state) {
-	this.city = city;
-	this.state = state;
-	this.landmarks = [];
+function Places(city, state, country) {
+  this.city = city;
+  this.state = state;
+  this.country = country;
+  this.landmarks = [];
 }
 
-Places.prototype.cityState = function() {
-	return this.city + " " + this.state;
+Places.prototype.cityStateCountry = function() {
+  return this.city + " " + this.state + " " + this.country;
 }
