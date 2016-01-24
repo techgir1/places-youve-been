@@ -1,12 +1,12 @@
-function Places(city, state, country) {
+function Places(city, state, country, landmarks) {
   this.city = city;
   this.state = state;
   this.country = country;
-  this.landmarks = [];
+  this.landmarks = landmarks;
 }
 
 Places.prototype.cityStateCountry = function() {
-  return this.city + ", " + this.state + ", " + this.country;
+  return this.city + ", " + this.state + " " + this.country + " " + this.landmarks;
 }
 
 $(document).ready(function() {
@@ -16,7 +16,8 @@ $(document).ready(function() {
     var inputtedCity = $("input#new-city").val();
     var inputtedState = $("input#new-state").val();
     var inputtedCountry = $("input#new-country").val();
-    var newPlace = new Places(inputtedCity, inputtedState, inputtedCountry);
+    var inputtedLandmark = $("input#new-landmarks").val();
+    var newPlace = new Places(inputtedCity, inputtedState, inputtedCountry, inputtedLandmark);
 
     $("ul#places").append("<li><span class='contact'>" + newPlace.cityStateCountry() + "</span></li>");
 
@@ -27,11 +28,13 @@ $(".contact").last().click(function() {
   $(".city-city").text(newPlace.city);
   $(".state-state").text(newPlace.state);
   $(".country-country").text(newPlace.country);
+  $(".landmarks-landmarks").text(newPlace.landmarks);
 });
 
     $("input#new-city").val("");
     $("input#new-state").val("");
     $("input#new-country").val("");
+    $("input#new-landmarks").val("");
   });
 });
 
