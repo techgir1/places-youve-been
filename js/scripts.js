@@ -6,7 +6,7 @@ function Places(city, state, country) {
 }
 
 Places.prototype.cityStateCountry = function() {
-  return this.city + " " + this.state + " " + this.country;
+  return this.city + ", " + this.state + ", " + this.country;
 }
 
 $(document).ready(function() {
