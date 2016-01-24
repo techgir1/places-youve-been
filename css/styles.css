@@ -10,3 +10,7 @@
 .contact:hover {
   text-decoration: underline;
 }
+
+#places {
+	list-style-type: none;
+}
